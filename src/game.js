@@ -16,7 +16,7 @@ canvas.height = displayHeight
 canvas.style.width = displayWidth + 'px'
 canvas.style.height = displayHeight + 'px'
 
-function init() {
+export function init() {
     const game = new Game()
     drawGrid()
     game.draw()
@@ -293,5 +293,3 @@ class Game {
         this.snake.newDir = newDir
     }
 }
-
-init()
