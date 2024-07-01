@@ -1,3 +1,4 @@
-import { init } from './game'
+import { Game } from "./game";
 
-init()
+const game = new Game()
+game.init()
