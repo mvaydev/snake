@@ -46,6 +46,9 @@ export class Game {
         this.snake = new Snake(this.gameCanvas)
         this.food = new Food(this.gameCanvas)
 
+        this.food.spawn(this.snake.parts)
+        this.snake.draw()
+
         this.scoreElement = document.querySelector('#score')
         this.bestElement = document.querySelector('#best')
 
@@ -54,8 +57,6 @@ export class Game {
     }
 
     init() {
-        this.gameCanvas.drawGrid()
-
         const startBtn = document.querySelector('button#start')
         const stopBtn = document.querySelector('button#stop')
 
@@ -65,11 +66,10 @@ export class Game {
     }
 
     reset() {
-        this.gameCanvas.drawGrid()
-
         this.snake = new Snake(this.gameCanvas)
         this.snake.draw()
 
+        this.food.clear()
         this.food = new Food(this.gameCanvas)
         this.food.spawn(this.snake.parts)
 
@@ -78,8 +78,6 @@ export class Game {
 
     start() {
         if (this.timer) return
-
-        this.food.spawn(this.snake.parts)
 
         this.timer = setInterval(() => {
             this.snake.clear()

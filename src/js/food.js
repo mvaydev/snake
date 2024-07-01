@@ -1,4 +1,4 @@
-import { colors } from "./canvas"
+import { colors, imgs } from "./canvas"
 
 function rand(min, max) {
     return Math.floor(Math.random() * (max - min) + min)
@@ -30,7 +30,7 @@ export class Food {
     }
 
     draw() {
-        this.gameCanvas.draw(this.x, this.y, colors.food)
+        this.gameCanvas.drawImage(this.x, this.y, imgs.apple)
     }
 
     clear() {
