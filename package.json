@@ -9,6 +9,9 @@
   },
   "author": "Maksim Vaysbekker <mvaydev@gmail.com>",
   "dependencies": {
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^4.0.0",
     "webpack": "^5.76.2",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.13.1"
